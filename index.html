@@ -28,17 +28,18 @@
   --oranje:#ee7a1a;--oranje-licht:#fdeee0;--oranje-donker:#c8640c;
   --blauw:#1a2d5a;--blauw-mid:#243468;
   --wit:#fff;--grijs:#f4f6fa;--tekst:#1a2d5a;--tekst-licht:#5a6a8a;--border:#dde3f0;
+  --zijrand:max(48px,calc((100% - 1200px) / 2 + 48px));
 }
 body{font-family:'Inter',sans-serif;color:var(--tekst);background:var(--wit);line-height:1.6;font-size:16px}
 a{text-decoration:none;color:inherit}
 
 /* TOPBAR */
-.topbar{background:var(--blauw);padding:7px 48px;display:flex;justify-content:flex-end;align-items:center;gap:24px}
+.topbar{background:var(--blauw);padding:7px var(--zijrand);display:flex;justify-content:flex-end;align-items:center;gap:24px}
 .topbar a{color:rgba(255,255,255,.65);font-size:13px;display:flex;align-items:center;gap:6px;transition:color .2s}
 .topbar a:hover{color:white}
 
 /* NAV */
-nav{background:var(--wit);border-bottom:2px solid var(--border);padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:80px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(26,45,90,.06)}
+nav{background:var(--wit);border-bottom:2px solid var(--border);padding:0 var(--zijrand);display:flex;align-items:center;justify-content:space-between;height:80px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(26,45,90,.06)}
 .logo-link{display:flex;align-items:center}
 .logo-img{height:52px;width:auto;display:block}
 .nav-links{display:flex;align-items:center;gap:4px}
@@ -53,7 +54,7 @@ nav{background:var(--wit);border-bottom:2px solid var(--border);padding:0 48px;d
 .hero-scene{position:absolute;inset:0;width:100%;height:100%}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,45,90,.82) 0%,rgba(26,45,90,.5) 55%,rgba(26,45,90,.1) 100%)}
-.hero-content{position:absolute;top:50%;left:max(48px,calc((100% - 1200px) / 2 + 48px));transform:translateY(-50%);color:white;max-width:540px}
+.hero-content{position:absolute;top:50%;left:var(--zijrand);transform:translateY(-50%);color:white;max-width:540px}
 .hero-content .eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#f5a85a;margin-bottom:14px}
 .hero-content h1{font-family:'Sora',sans-serif;font-size:46px;font-weight:700;line-height:1.15;margin-bottom:18px}
 .hero-content .sub{font-size:17px;color:rgba(255,255,255,.8);margin-bottom:32px;line-height:1.7}
